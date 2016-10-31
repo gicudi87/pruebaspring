@@ -1,0 +1,119 @@
+body{
+	width: 76%;
+	margin: 0 12% 0 12%;
+}
+
+.col-sm-4 {
+	width: 33.33333%;
+	height: 200px;
+	box-sizing: border-box;
+	float: left;
+	display: block;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.hidden-xs {
+	margin: 50px auto;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.text-muted {
+	padding: 0 10% 0 10%
+}
+
+.row::before {
+	display: table;
+	content: " ";
+}
+
+.footer::after, .footer::before {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container p {
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+}
+
+.footer {
+	background-color: #f5A5f5;
+	bottom: 0px;
+	height: 50px;
+	position: relative;
+}
+
+.footer .container {
+	position: absolute;
+	top: 30%;
+}
+
+.nav > li:hover{
+    background-color:#F56E6E;
+    color: #fff;
+}
+.nav > li > a:hover{    
+    color: #fff;
+}
+
+.icon{
+	width: 22px;
+	height: 22px;
+}
+
+.paginate_button{
+	border-radius: 50%;
+	background: #00CC66;
+}
+
+.paginate_button:hover{	
+	background: #00CC00;
+}
+
+.current{	
+	color: #FFFFFF;
+	background-color: white;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff),
+		color-stop(100%, #006600));
+	background: -webkit-linear-gradient(top, #fff 0%, #006600 100%);
+	background: -moz-linear-gradient(top, #fff 0%, #006600 100%);
+	background: -ms-linear-gradient(top, #fff 0%, #006600 100%);
+	background: -o-linear-gradient(top, #fff 0%, #006600 100%);
+	background: linear-gradient(to bottom, #fff 0%, #006600 100%)
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a{
+	color: #FFFFFF;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a:hover{
+	background-color: #800000;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+
+
+@media (max-width: 768px) {
+	.col-sm-4 {
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	float: left;
+	display: block;
+}
+}

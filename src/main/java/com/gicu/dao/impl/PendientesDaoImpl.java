@@ -51,7 +51,7 @@ public class PendientesDaoImpl implements PendientesDao {
 	@SuppressWarnings("unchecked")
 	public List<Pendientes> listPendiente() {
 		Session session = sessionFactory.openSession();
-		List<Pendientes> list = session.createQuery("from Pendientes").list();//es HQL no sql-. investiga como funciona
+		List<Pendientes> list = session.createQuery("from Pendientes").list();
 		session.close();
 		return list;
 	}

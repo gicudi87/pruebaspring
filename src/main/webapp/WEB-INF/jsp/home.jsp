@@ -41,7 +41,7 @@
     function deletePendiente(pendienteId){
     	console.log(pendienteId);
     	var i = ".do"
-        if(confirm('¿Esta seguro de borrar este pendiente?')){
+        if(confirm('Â¿Esta seguro de borrar este pendiente?')){
             var url = 'delete/'+pendienteId+".do";
             window.location.href = url;
         }
@@ -53,7 +53,7 @@
      <div style="margin-left: 15%">
 	<h2 style="margin-left: 10%; color: #333399;">Pendientes</h2>
 	<div class="container">
-		 <form:form action="/CRUDWebAppMavenized/savePendiente.do" method="POST" commandName="pendiente">
+		 <form:form action="/savePendiente.do" method="POST" commandName="pendiente">
 	<table>
 		<tr>
 			<td></td>

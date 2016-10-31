@@ -34,36 +34,15 @@ public class PendientesCtrl {
 	@RequestMapping(value="/index.do", method = RequestMethod.GET) 
 	public String listPendiente(Map<String, Object>map){
 		map.put("pendiente", new Pendientes());
-		map.put("PendienteList", pendientesService.listPendiente());
-		map.put("total", pendientesService.listPendiente().size());
+		java.util.List<Pendientes> list = pendientesService.listPendiente();
+		map.put("PendienteList", list);
+		map.put("total", list.size());
 		
 		return "home";
 		
 	}
 	
-//	public ModelAndView listPendiente(){
-//		
-//		ModelAndView map = new ModelAndView();
-//		
-//		
-//		map.setViewName("home");
-//		map.addObject("PendienteList", pendientesService.listPendiente());
-//		map.addObject("pendiente", new Pendientes());
-////		map.addObject("total", pendientesService.listPendiente().size());
-//		System.out.println("////////////////////////////////////");
-//		
-//		return map;
-//
-//		}
-//		
-//	public String listPendiente(ModelMap map){
-//		map.addAttribute("pendiente", new Pendientes());
-//		map.addAttribute("PendienteList", pendientesService.listPendiente());
-//		map.addAttribute("total", pendientesService.listPendiente().size());
-//	return "home";
-//	
-//}
-//	
+
 	
 	@RequestMapping(
 	value = "/savePendiente",
@@ -97,8 +76,9 @@ public class PendientesCtrl {
 			Map<String, Object>map)
 			{
 		map.put("pendiente", pendientesService.getPendientesById(pendienteId));
-		map.put("PendienteList", pendientesService.listPendiente());
-		map.put("total", pendientesService.listPendiente().size());
+		java.util.List<Pendientes> list = pendientesService.listPendiente();
+		map.put("PendienteList", list);
+		map.put("total", list.size());
 		return "home";
 			}
 	

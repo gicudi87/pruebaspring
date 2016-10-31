@@ -48,11 +48,11 @@ public class PendientesDaoImpl implements PendientesDao {
 	}
 
 	@Override
-//	@SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")
 	public List<Pendientes> listPendiente() {
-		List<Pendientes> list = this.sessionFactory.openSession()
-				.createQuery("from Pendientes").list();//es HQL no sql-. investiga como funciona
-//		this.sessionFactory.getCurrentSession().close();
+		Session session = sessionFactory.openSession();
+		List<Pendientes> list = session.createQuery("from Pendientes").list();//es HQL no sql-. investiga como funciona
+		session.close();
 		return list;
 	}
 

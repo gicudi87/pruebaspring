@@ -8,6 +8,6 @@
 </head>
 <body>
 hola
-<% response.sendRedirect("/index.do"); %>
+<% response.sendRedirect("/CRUDWebAppMavenized/index.do"); %>
 </body>
 </html>
